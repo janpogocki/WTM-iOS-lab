@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1611" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="cdbrowser" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49C-TK-wLm">
+                                <rect key="frame" x="294" y="629" width="65" height="30"/>
+                                <state key="normal" title="Następny"/>
+                                <connections>
+                                    <action selector="nextAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yQZ-ZI-qKP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3L-DD-0Ur">
+                                <rect key="frame" x="16" y="629" width="70" height="30"/>
+                                <state key="normal" title="Poprzedni"/>
+                                <connections>
+                                    <action selector="previousAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tKZ-Gs-b6o"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Axp-xV-wQt">
+                                <rect key="frame" x="313" y="591" width="46" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmP-a3-2zG">
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                        <state key="normal" title="Zapisz"/>
+                                        <connections>
+                                            <action selector="saveCurrent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lsQ-db-Opx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLh-pF-jGt">
+                                <rect key="frame" x="16" y="591" width="87" height="30"/>
+                                <state key="normal" title="Nowy rekord"/>
+                                <connections>
+                                    <action selector="newRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ao0-dr-LZK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbe-vW-xcF">
+                                <rect key="frame" x="169.5" y="591" width="36" height="30"/>
+                                <state key="normal" title="Usuń"/>
+                                <connections>
+                                    <action selector="deleteCurrent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u9y-Qx-mjV"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eYQ-9K-5xy">
+                                <rect key="frame" x="169.5" y="68" width="189.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="wykonawcaChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="kul-vl-2cm"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Rekord X z Y" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZH-Fd-7P1">
+                                <rect key="frame" x="140" y="626" width="95" height="33"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Wykonawca:" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ln2-v1-y79">
+                                <rect key="frame" x="16" y="66" width="96.5" height="33"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Tytuł:" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKl-AC-p5I">
+                                <rect key="frame" x="16" y="107" width="52" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="52" id="mbC-NA-KTy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Gatunek muzyczny:" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rA2-KA-9cp">
+                                <rect key="frame" x="16" y="145" width="142.5" height="33"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Rok wydania:" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkU-NQ-8ze">
+                                <rect key="frame" x="16" y="186" width="100.5" height="35"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Liczba ścieżek:" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hw3-s8-iYe">
+                                <rect key="frame" x="16" y="229" width="112.5" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="izj-bj-dpO">
+                                <rect key="frame" x="169.5" y="107" width="189.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="tytulChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="yda-T5-LI3"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nPa-12-aqI">
+                                <rect key="frame" x="169.5" y="148" width="189.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="gatunekChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="JpY-Bl-bGt"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jXj-Ef-NPG">
+                                <rect key="frame" x="169.5" y="191" width="189.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="rokChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="Sde-gw-hgp"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wAe-Ip-8N4">
+                                <rect key="frame" x="169.5" y="231" width="189.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="liczbaSciezekChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="Eaz-M8-pUo"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Jan Pogocki" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Owy-J3-hbr">
+                                <rect key="frame" x="140" y="28" width="95" height="32"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jXj-Ef-NPG" firstAttribute="top" secondItem="nPa-12-aqI" secondAttribute="bottom" constant="13" id="29N-op-qbl"/>
+                            <constraint firstItem="izj-bj-dpO" firstAttribute="leading" secondItem="nPa-12-aqI" secondAttribute="leading" id="2aS-KG-t69"/>
+                            <constraint firstItem="G3L-DD-0Ur" firstAttribute="baseline" secondItem="49C-TK-wLm" secondAttribute="baseline" id="2gN-r1-eiC"/>
+                            <constraint firstItem="QZH-Fd-7P1" firstAttribute="leading" secondItem="G3L-DD-0Ur" secondAttribute="trailing" constant="54" id="5ct-v5-IxG"/>
+                            <constraint firstItem="OLh-pF-jGt" firstAttribute="baseline" secondItem="gbe-vW-xcF" secondAttribute="baseline" id="7X8-zM-66T"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QZH-Fd-7P1" secondAttribute="bottom" constant="8" symbolic="YES" id="7dr-wI-U8s"/>
+                            <constraint firstItem="nPa-12-aqI" firstAttribute="trailing" secondItem="jXj-Ef-NPG" secondAttribute="trailing" id="7hj-Ia-7uf"/>
+                            <constraint firstItem="Owy-J3-hbr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="8oS-RV-ktI"/>
+                            <constraint firstItem="jXj-Ef-NPG" firstAttribute="leading" secondItem="bkU-NQ-8ze" secondAttribute="trailing" constant="53" id="9PX-Yc-At6"/>
+                            <constraint firstItem="jXj-Ef-NPG" firstAttribute="leading" secondItem="wAe-Ip-8N4" secondAttribute="leading" id="9cn-gU-LUd"/>
+                            <constraint firstItem="jXj-Ef-NPG" firstAttribute="trailing" secondItem="wAe-Ip-8N4" secondAttribute="trailing" id="ADH-RG-v0e"/>
+                            <constraint firstItem="nPa-12-aqI" firstAttribute="leading" secondItem="rA2-KA-9cp" secondAttribute="trailing" constant="11" id="BNZ-IW-iK7"/>
+                            <constraint firstItem="bkU-NQ-8ze" firstAttribute="bottom" secondItem="jXj-Ef-NPG" secondAttribute="bottom" id="BsR-Js-RU7"/>
+                            <constraint firstItem="eYQ-9K-5xy" firstAttribute="leading" secondItem="Ln2-v1-y79" secondAttribute="trailing" constant="57" id="D4m-wC-MSb"/>
+                            <constraint firstItem="bkU-NQ-8ze" firstAttribute="top" secondItem="rA2-KA-9cp" secondAttribute="bottom" constant="8" symbolic="YES" id="Dci-Ie-b52"/>
+                            <constraint firstItem="hw3-s8-iYe" firstAttribute="top" secondItem="bkU-NQ-8ze" secondAttribute="bottom" constant="8" symbolic="YES" id="HE7-Lg-ciS"/>
+                            <constraint firstItem="Ln2-v1-y79" firstAttribute="leading" secondItem="HKl-AC-p5I" secondAttribute="leading" id="HpB-3a-Aee"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="G3L-DD-0Ur" secondAttribute="bottom" constant="8" symbolic="YES" id="Id4-ta-7TV"/>
+                            <constraint firstItem="nPa-12-aqI" firstAttribute="leading" secondItem="jXj-Ef-NPG" secondAttribute="leading" id="Jdc-BB-g8I"/>
+                            <constraint firstItem="hw3-s8-iYe" firstAttribute="leading" secondItem="OLh-pF-jGt" secondAttribute="leading" id="L2t-4b-1LE"/>
+                            <constraint firstItem="izj-bj-dpO" firstAttribute="top" secondItem="eYQ-9K-5xy" secondAttribute="bottom" constant="9" id="L3X-0r-3G0"/>
+                            <constraint firstItem="OLh-pF-jGt" firstAttribute="leading" secondItem="G3L-DD-0Ur" secondAttribute="leading" id="NQJ-JI-eHU"/>
+                            <constraint firstItem="QZH-Fd-7P1" firstAttribute="top" secondItem="gbe-vW-xcF" secondAttribute="bottom" constant="5" id="OOu-3f-Fxe"/>
+                            <constraint firstItem="HKl-AC-p5I" firstAttribute="bottom" secondItem="izj-bj-dpO" secondAttribute="bottom" id="P4r-f4-QvP"/>
+                            <constraint firstItem="wAe-Ip-8N4" firstAttribute="top" secondItem="jXj-Ef-NPG" secondAttribute="bottom" constant="10" id="PLk-Q8-1Mp"/>
+                            <constraint firstItem="HKl-AC-p5I" firstAttribute="leading" secondItem="rA2-KA-9cp" secondAttribute="leading" id="QA4-mg-HUb"/>
+                            <constraint firstItem="Ln2-v1-y79" firstAttribute="centerY" secondItem="eYQ-9K-5xy" secondAttribute="centerY" id="R9b-Eu-d7E"/>
+                            <constraint firstItem="izj-bj-dpO" firstAttribute="trailing" secondItem="nPa-12-aqI" secondAttribute="trailing" id="TD8-H6-vdn"/>
+                            <constraint firstItem="G3L-DD-0Ur" firstAttribute="top" secondItem="OLh-pF-jGt" secondAttribute="bottom" constant="8" symbolic="YES" id="TJM-hX-Pgd"/>
+                            <constraint firstItem="Ln2-v1-y79" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ayp-LM-kfF"/>
+                            <constraint firstItem="Axp-xV-wQt" firstAttribute="trailing" secondItem="49C-TK-wLm" secondAttribute="trailing" id="bER-Mc-cW6"/>
+                            <constraint firstItem="nPa-12-aqI" firstAttribute="top" secondItem="izj-bj-dpO" secondAttribute="bottom" constant="11" id="bho-s0-33g"/>
+                            <constraint firstItem="Ln2-v1-y79" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="46" id="chm-yl-gbs"/>
+                            <constraint firstItem="eYQ-9K-5xy" firstAttribute="top" secondItem="Owy-J3-hbr" secondAttribute="bottom" constant="8" symbolic="YES" id="fdE-N5-Kub"/>
+                            <constraint firstItem="wAe-Ip-8N4" firstAttribute="leading" secondItem="gbe-vW-xcF" secondAttribute="leading" id="fdb-s4-wJT"/>
+                            <constraint firstItem="HKl-AC-p5I" firstAttribute="top" secondItem="Ln2-v1-y79" secondAttribute="bottom" constant="8" symbolic="YES" id="gkP-dJ-YLv"/>
+                            <constraint firstItem="gbe-vW-xcF" firstAttribute="centerX" secondItem="QZH-Fd-7P1" secondAttribute="centerX" id="gq4-QH-oDb"/>
+                            <constraint firstItem="rA2-KA-9cp" firstAttribute="bottom" secondItem="nPa-12-aqI" secondAttribute="bottom" id="hYk-F6-wEc"/>
+                            <constraint firstItem="eYQ-9K-5xy" firstAttribute="trailing" secondItem="izj-bj-dpO" secondAttribute="trailing" id="jP7-74-Kns"/>
+                            <constraint firstItem="gbe-vW-xcF" firstAttribute="top" secondItem="Axp-xV-wQt" secondAttribute="top" id="n7Z-6e-fzB"/>
+                            <constraint firstItem="wAe-Ip-8N4" firstAttribute="trailing" secondItem="Axp-xV-wQt" secondAttribute="trailing" id="nxE-m7-Zbm"/>
+                            <constraint firstItem="rA2-KA-9cp" firstAttribute="top" secondItem="HKl-AC-p5I" secondAttribute="bottom" constant="8" symbolic="YES" id="qEa-aR-31k"/>
+                            <constraint firstItem="Owy-J3-hbr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qnz-c6-REi"/>
+                            <constraint firstItem="rA2-KA-9cp" firstAttribute="leading" secondItem="bkU-NQ-8ze" secondAttribute="leading" id="soX-v4-Afc"/>
+                            <constraint firstItem="eYQ-9K-5xy" firstAttribute="leading" secondItem="izj-bj-dpO" secondAttribute="leading" id="usS-Sc-gu6"/>
+                            <constraint firstItem="hw3-s8-iYe" firstAttribute="centerY" secondItem="wAe-Ip-8N4" secondAttribute="centerY" id="v0X-oi-Psv"/>
+                            <constraint firstItem="eYQ-9K-5xy" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="vmM-Yt-Me9"/>
+                            <constraint firstItem="HKl-AC-p5I" firstAttribute="top" secondItem="izj-bj-dpO" secondAttribute="top" id="vvj-zX-GHO"/>
+                            <constraint firstItem="Owy-J3-hbr" firstAttribute="leading" secondItem="QZH-Fd-7P1" secondAttribute="leading" id="yA1-KK-Jqi"/>
+                            <constraint firstItem="bkU-NQ-8ze" firstAttribute="leading" secondItem="hw3-s8-iYe" secondAttribute="leading" id="yRJ-fS-iDH"/>
+                            <constraint firstItem="wAe-Ip-8N4" firstAttribute="leading" secondItem="hw3-s8-iYe" secondAttribute="trailing" constant="41" id="zW2-st-Jae"/>
+                            <constraint firstItem="Owy-J3-hbr" firstAttribute="trailing" secondItem="QZH-Fd-7P1" secondAttribute="trailing" id="zlm-GI-Z93"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="deleteButton" destination="gbe-vW-xcF" id="sUP-6o-scl"/>
+                        <outlet property="gatunek" destination="nPa-12-aqI" id="A5c-g0-Boj"/>
+                        <outlet property="liczbaSciezek" destination="wAe-Ip-8N4" id="vbU-Ps-ewm"/>
+                        <outlet property="nextButton" destination="49C-TK-wLm" id="Ehj-2M-Qx2"/>
+                        <outlet property="previous" destination="G3L-DD-0Ur" id="w3c-uQ-1bF"/>
+                        <outlet property="recordXofY" destination="QZH-Fd-7P1" id="l1j-33-Lry"/>
+                        <outlet property="rok" destination="jXj-Ef-NPG" id="fKW-IP-7N8"/>
+                        <outlet property="saveButton" destination="nmP-a3-2zG" id="04M-o3-NUY"/>
+                        <outlet property="tytul" destination="izj-bj-dpO" id="KbG-sg-seN"/>
+                        <outlet property="wykonawca" destination="eYQ-9K-5xy" id="OlY-b2-KfL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21.600000000000001" y="40.929535232383813"/>
+        </scene>
+    </scenes>
+</document>
